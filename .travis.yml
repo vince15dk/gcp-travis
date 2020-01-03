@@ -9,7 +9,7 @@ before_install:
   - gcloud config set project playground-s-11-911f62
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials nodejs-travis
-  - pwd
   - docker build --tag node-travis:v1 .
 script:
   - docker run node-travis:v1 -d
+  - pwd
