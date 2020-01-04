@@ -9,6 +9,7 @@ before_install:
 script:
   - pwd
   - whoami
+  - git commit -am 'test'
 
 deploy:
   provider: script
