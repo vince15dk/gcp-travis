@@ -13,8 +13,7 @@ script:
 deploy:
   provider: script
   script: 
-  - pwd
-  - whoami
+  - ssh -o StrictHostKeyChecking=no cloud_user_p_dfae2c@35.238.113.19 "touch test"
   on:
     branch: master
 
