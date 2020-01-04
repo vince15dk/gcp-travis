@@ -6,10 +6,8 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project playground-s-11-b929a5
   - gcloud config set compute/zone us-central1-a
-  - docker build --tag node-travis:v1 .
 script:
   - pwd
-  - touch test
   - whoami
 
 deploy:
