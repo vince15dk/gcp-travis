@@ -8,6 +8,16 @@ before_install:
   - gcloud config set compute/zone us-central1-a
   - docker build --tag node-travis:v1 .
 script:
-  - docker run node-travis:v1 -d
+  - docker run node-travis:v1
   - pwd
   - touch test
+  - whoami
+
+deploy:
+  provider: script
+  script: 
+  - pwd
+  - whoami
+  on:
+    branch: master
+
