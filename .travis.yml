@@ -6,7 +6,6 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project playground-s-11-b929a5
   - gcloud config set compute/zone us-central1-a
-  - gcloud container clusters get-credentials gcp-instance1
   - docker build --tag node-travis:v1 .
 script:
   - docker run node-travis:v1 -d
